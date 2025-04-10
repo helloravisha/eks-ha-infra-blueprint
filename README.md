@@ -8,7 +8,7 @@
 
 **Ekscape** is an open-source, opinionated blueprint for deploying a highly available Amazon EKS cluster. It integrates modern DevOps tools and best practices to streamline infrastructure management and application delivery.
 
-This project is perfect for engineers, teams, and platform architects looking to stand up a production-grade Kubernetes cluster with minimal friction.
+This project is perfect for engineers, teams, and platform architects looking to stand up a production-grade Kubernetes cluster with minimal friction on Amazon EKS.
 
 ---
 
