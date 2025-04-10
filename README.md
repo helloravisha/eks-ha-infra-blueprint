@@ -1,4 +1,4 @@
-# Ekscape
+# eks-ha-infra-blueprint
 
 > **A production-ready, high-availability EKS platform with CI/CD, observability, and alerting – all in one blueprint.**
 
