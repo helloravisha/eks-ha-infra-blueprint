@@ -20,7 +20,6 @@ This project is perfect for engineers, teams, and platform architects looking to
 - 📊 **Observability**: Full ELK stack (Elasticsearch, Logstash, Kibana) for logs and monitoring
 - 🚨 **Alerting**: Integrated with PagerDuty for incident response
 - 🔐 **Security Best Practices**: IAM roles, secrets management, and private networking
-- 🧱 **Modular Infrastructure**: Easily extendable Terraform/Helm modules
 - 🌐 **Infrastructure as Code**: Fully automated cluster and platform provisioning
 
 ---
