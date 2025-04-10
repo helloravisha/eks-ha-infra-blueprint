@@ -1,0 +1,50 @@
+replicaCount: 1
+
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  name: nginx
+  type: ClusterIP
+  port: 80
+
+upstream:
+  name: my-upstream
+  servers:
+    - name: service1
+      ip: 10.0.0.1
+      port: 8080
+    - name: service2
+      ip: 10.0.0.2
+      port: 8080
+
+configMap:
+  nginx.conf: |
+    upstream {{ .Values.upstream.name }} {
+      {{- range .Values.upstream.servers }}
+      server {{ .ip }}:{{ .port }};
+      {{- end }}
+    }
+
+    server {
+      listen 80;
+      server_name localhost;
+
+      location / {
+        proxy_pass http://{{ .Values.upstream.name }};
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+      }
+
+      error_page  404              /404.html;
+      location = /40x.html {
+      }
+
+      error_page   500 502 503 504  /50x.html;
+      location = /50x.html {
+      }
+    }
