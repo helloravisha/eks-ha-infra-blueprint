@@ -1,0 +1,12 @@
+ingress-nginx:
+  controller:
+    service:
+      externalTrafficPolicy: Local
+    config:
+      proxy-read-timeout: 1200
+      upstream-keepalive-timeout: 65
+      annotations-risk-level: Critical
+      strict-validate-path-type: False
+
+    replicaCount: 1
+    allowSnippetAnnotations: true
