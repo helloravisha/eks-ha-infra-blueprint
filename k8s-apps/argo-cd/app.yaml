@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/helloravisha/eks-ha-infra-blueprint.git'  # Replace with your GitLab repo URL
     targetRevision: HEAD  # or specify a branch/tag if needed
-    path: k8s-apps/helm/nginx  # Replace with the path to your NGINX Helm chart in the repo
+    path: k8s-apps/helm/ngx1  # Replace with the path to your NGINX Helm chart in the repo
     helm:
       releaseName: nginx
       values: |
