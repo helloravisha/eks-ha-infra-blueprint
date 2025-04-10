@@ -15,7 +15,8 @@ This project is perfect for engineers, teams, and platform architects looking to
 ## 🧰 Features
 
 - ⚙️ **High Availability (HA)**: Multi-AZ EKS setup with self-healing node groups
-- 🔄 **CI/CD Integration**: GitOps-driven continuous delivery using ArgoCD or Flux
+-  **CI/CD Integration**: GitOps-driven continuous delivery using ArgoCD
+-      https://ac4c6ddce482f4bb59c81b0f0979729b-2113508635.us-east-2.elb.amazonaws.com/
 - 📊 **Observability**: Full ELK stack (Elasticsearch, Logstash, Kibana) for logs and monitoring
 - 🚨 **Alerting**: Integrated with PagerDuty for incident response
 - 🔐 **Security Best Practices**: IAM roles, secrets management, and private networking
