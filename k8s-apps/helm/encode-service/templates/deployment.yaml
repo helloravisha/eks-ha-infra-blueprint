@@ -17,7 +17,7 @@ spec:
         app: {{ include "encode-service.name" . }}
     spec:
       containers:
-        - name: order-service
+        - name: encode-service
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
