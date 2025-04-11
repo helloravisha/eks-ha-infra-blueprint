@@ -13,7 +13,7 @@ spec:
     - host: {{ .Values.ingress.hosts[0].host }}
       http:
         paths:
-          - path: /
+          - path: /order
             pathType: Prefix
             backend:
               service:
