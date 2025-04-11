@@ -1,0 +1,24 @@
+# values.yaml
+
+replicaCount: 1
+
+image:
+  repository: helloravisha/order-service
+  tag: latest
+  pullPolicy: Always
+
+service:
+  name: order-service
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: order-service.local
+      paths: []
+  tls: []
+
+resources: {}
+

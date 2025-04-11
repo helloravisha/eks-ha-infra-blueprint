@@ -1,0 +1,24 @@
+# values.yaml
+
+replicaCount: 1
+
+image:
+  repository: helloravisha/encode-service
+  tag: latest
+  pullPolicy: Always
+
+service:
+  name: encode-service
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: encode-service.local
+      paths: []
+  tls: []
+
+resources: {}
+

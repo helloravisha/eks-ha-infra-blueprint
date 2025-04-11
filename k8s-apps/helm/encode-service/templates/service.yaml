@@ -1,0 +1,16 @@
+# service.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "encode-service.fullname" . }}
+  labels:
+    {{- include "encode-service.labels" . | nindent 4 }}
+spec:
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 5000
+      protocol: TCP
+  selector:
+    app: {{ include "encode-service.name" . }}
+
