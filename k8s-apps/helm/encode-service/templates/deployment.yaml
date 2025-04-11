@@ -1,9 +1,8 @@
-# deployment.yaml
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "encode-service.fullname" . }}
+  namespace: encode-namespace  # Specify the namespace here
   labels:
     {{- include "encode-service.labels" . | nindent 4 }}
 spec:
@@ -22,4 +21,3 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: 5000
-
