@@ -10,7 +10,7 @@ metadata:
     {{- toYaml .Values.ingress.annotations | nindent 4 }}
 spec:
   rules:
-    - host: {{ .Values.ingress.hosts[0].host }}
+    - host: {{ .Values.ingress.host }}
       http:
         paths:
           - path: /encode
