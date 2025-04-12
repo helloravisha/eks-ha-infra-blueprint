@@ -3,9 +3,9 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ include "encode-service.fullname" . }}
+  name: encode-service
   labels:
-    {{- include "encode-service.labels" . | nindent 4 }}
+    app: encode-service
   annotations:
     {{- toYaml .Values.ingress.annotations | nindent 4 }}
 spec:
@@ -17,7 +17,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ include "encode-service.fullname" . }}
+                name: encode-service
                 port:
                   number: {{ .Values.service.port }}
 
