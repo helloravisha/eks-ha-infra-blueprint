@@ -4,16 +4,16 @@ metadata:
   name: encode-service
   namespace: encode-namespace  # Specify the namespace here
   labels:
-    {{- include "encode-service.labels" . | nindent 4 }}
+    app: encode-service
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "encode-service.name" . }}
+      app: encode-service
   template:
     metadata:
       labels:
-        app: {{ include "encode-service.name" . }}
+        app: encode-service
     spec:
       containers:
         - name: encode-service
