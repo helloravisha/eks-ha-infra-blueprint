@@ -15,7 +15,7 @@ spec:
         replicaCount: 1  # Customize the values as needed
   destination: # EKS Cluster details , which is target for deployment
     server: https://2C75B8AEE83A5F41EBE3A6011BA77D47.gr7.us-east-2.eks.amazonaws.com
-    namespace: prod  # Specify the namespace where NGINX should be deployed
+    namespace: encode  # Specify the namespace where NGINX should be deployed
   syncPolicy:
     automated:
       prune: true
