@@ -7,12 +7,12 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/helloravisha/eks-ha-infra-blueprint.git'  
-    targetRevision: HEAD  # or specify a branch/tag if needed
+    targetRevision: HEAD  # or specify a branch/tag if needed 
     path: k8s-apps/helm/encode-service  
     helm:
       releaseName: encode
       values: |
-        replicaCount: 1  # Customize the values as needed
+        replicaCount: 1  # Customize the values as needed defaulted 1
   destination: # EKS Cluster details , which is target for deployment
     server: https://2C75B8AEE83A5F41EBE3A6011BA77D47.gr7.us-east-2.eks.amazonaws.com
     namespace: prod  # Specify the namespace where NGINX should be deployed
