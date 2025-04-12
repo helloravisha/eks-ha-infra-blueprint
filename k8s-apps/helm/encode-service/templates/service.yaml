@@ -3,14 +3,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "encode-service.fullname" . }}
+  name: encode-service
   labels:
-    {{- include "encode-service.labels" . | nindent 4 }}
+    app: encode-service
 spec:
   ports:
     - port: {{ .Values.service.port }}
       targetPort: 5000
       protocol: TCP
   selector:
-    app: {{ include "encode-service.name" . }}
+    app: encode-service
 
