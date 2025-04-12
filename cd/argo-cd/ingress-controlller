@@ -19,7 +19,7 @@ spec:
           tag: v1.10.1
   destination: # EKS Cluster details , which is target for deployment
     server: https://2C75B8AEE83A5F41EBE3A6011BA77D47.gr7.us-east-2.eks.amazonaws.com
-    namespace: prod  # Specify the namespace where NGINX should be deployed
+    namespace: prod  # Specify the ns where NGINX should be deployed
   syncPolicy:
     automated:
       prune: true
