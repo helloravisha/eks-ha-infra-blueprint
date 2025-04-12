@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: encode-service
-  namespace: encode-namespace  # Specify the namespace here
   labels:
     app: encode-service
 spec:
