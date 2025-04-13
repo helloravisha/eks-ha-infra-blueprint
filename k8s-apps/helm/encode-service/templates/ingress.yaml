@@ -20,4 +20,11 @@ spec:
                 name: encode-service
                 port:
                   number: {{ .Values.service.port }}
+          - path: /hello
+            pathType: Prefix
+            backend:
+              service:
+                name: encode-service
+                port:
+                  number: {{ .Values.service.port }}
 
