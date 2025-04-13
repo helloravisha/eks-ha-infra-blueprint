@@ -6,15 +6,14 @@ metadata:
   labels:
     app: pyroscope
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-    - host: {{ .Values.ingress.host }}
+    - host: {{ .Values.ingress.host }}  # or use the ALB DNS
       http:
         paths:
-          - path: /pyroscope(/|$)(.*)
+          - path: /
             pathType: Prefix
             backend:
               service:
