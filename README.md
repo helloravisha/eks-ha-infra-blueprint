@@ -21,6 +21,7 @@ This project is perfect for engineers, teams, and platform architects looking to
 - 🚨 **Alerting**: Integrated with PagerDuty for incident response
 - 🔐 **Security Best Practices**: IAM roles, secrets management, and private networking
 - 🌐 **Infrastructure as Code**: Fully automated cluster and platform provisioning
+      - Terraform    
 
 ---
 
