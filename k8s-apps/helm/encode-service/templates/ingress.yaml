@@ -8,13 +8,13 @@ metadata:
     app: encode-service
   annotations:
     {{- toYaml .Values.ingress.annotations | nindent 4 }}
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
     - host: {{ .Values.ingress.host }}
       http:
         paths:
-          - path: /encode
+          - path: /encode(/|$)(.*)
             pathType: Prefix
             backend:
               service:
