@@ -3,5 +3,5 @@ name: pyroscope-stack
 version: 1.0.0
 dependencies:
   - name: pyroscope
-    version: 1.4.13
-    repository: https://pyroscope-io.github.io/helm-chart
+    version: 1.6.1
+    repository: https://grafana.github.io/helm-charts
