@@ -1,1 +1,26 @@
 
+# ingress.yaml
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pyroscope
+  namespace: observability
+  labels:
+    app: pyroscope
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+spec:
+  rules:
+    - host: {{ .Values.ingress.host }}
+      http:
+        paths:
+          - path: /pyroscope(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: pyroscope
+                port:
+                  number: 4040
+
