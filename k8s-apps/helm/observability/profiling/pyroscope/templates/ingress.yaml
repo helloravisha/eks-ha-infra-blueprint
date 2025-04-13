@@ -9,7 +9,7 @@ metadata:
   labels:
     app: pyroscope
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /pyroscope/$2
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
 spec:
   rules:
