@@ -1,7 +1,0 @@
-apiVersion: v2
-name: pyroscope-stack
-version: 1.0.0
-dependencies:
-  - name: pyroscope
-    version: 1.4.13
-    repository: https://pyroscope-io.github.io/helm-chart

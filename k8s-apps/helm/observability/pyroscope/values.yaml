@@ -1,6 +1,0 @@
-pyroscope:
-  server:
-    persistentVolume:
-      enabled: false  # Turn on in production
-    service:
-      type: ClusterIP
