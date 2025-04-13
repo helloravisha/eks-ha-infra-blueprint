@@ -4,3 +4,10 @@ pyroscope:
       enabled: false  # Turn on in production
     service:
       type: ClusterIP
+
+ingress:
+  enabled: true
+  host: pyroscope.yourdomain.com  # Replace with your actual domain
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
