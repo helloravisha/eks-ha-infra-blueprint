@@ -11,7 +11,7 @@ prometheus:
 
 # Prometheus ConfigMap
 prometheusConfig:
-  prometheusYml: |
+  prometheus.yml: |
     global:
       scrape_interval: 15s
 
@@ -25,3 +25,4 @@ prometheusConfig:
         metrics_path: /metrics
         static_configs:
           - targets: ['node-exporter:9100']
+
