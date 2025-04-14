@@ -5,7 +5,7 @@ metadata:
   labels:
     app: encode-service
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: 2
   selector:
     matchLabels:
       app: encode-service
