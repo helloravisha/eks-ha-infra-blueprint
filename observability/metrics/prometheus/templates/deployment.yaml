@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: prometheus
 spec:
-  replicas: 1  # Set the desired number of replicas
+  replicas: {{ .Values.prometheus.prometheusSpec.replicas }}  # Use the value from values.yaml
   selector:
     matchLabels:
       app: prometheus
@@ -16,13 +16,13 @@ spec:
         - name: prometheus
           image: prom/prometheus:v2.45.0  # Hardcoded image tag
           args:
-            - "--config.file=/etc/prometheus/prometheus.yml"
+            - "--config.file=/etc/prometheus/prometheus.yml"  # Config file reference
           ports:
             - containerPort: 9090
           volumeMounts:
             - name: config-volume
-              mountPath: /etc/prometheus
+              mountPath: /etc/prometheus  # Mount the ConfigMap here
       volumes:
         - name: config-volume
           configMap:
-            name: prometheus-config
+            name: prometheus-config  # ConfigMap name from values.yaml
