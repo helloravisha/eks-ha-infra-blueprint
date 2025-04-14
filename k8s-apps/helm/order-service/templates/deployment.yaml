@@ -1,19 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "order-service.fullname" . }}
-  namespace: order-namespace  # Specify the namespace here
+  name: order-service
   labels:
-    {{- include "order-service.labels" . | nindent 4 }}
+    app: order-service
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "order-service.name" . }}
+      app: order-service
   template:
     metadata:
       labels:
-        app: {{ include "order-service.name" . }}
+        app: order-service
     spec:
       containers:
         - name: order-service
