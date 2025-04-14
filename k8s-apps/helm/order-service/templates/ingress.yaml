@@ -3,21 +3,29 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ include "order-service.fullname" . }}
+  name: order-service
   labels:
-    {{- include "order-service.labels" . | nindent 4 }}
+    app: order-service
   annotations:
     {{- toYaml .Values.ingress.annotations | nindent 4 }}
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
-    - host: {{ .Values.ingress.hosts[0].host }}
+    - host: {{ .Values.ingress.host }}
       http:
         paths:
-          - path: /order
+          - path: /order(/|$)(.*)
             pathType: Prefix
             backend:
               service:
-                name: {{ include "order-service.fullname" . }}
+                name: order-service
+                port:
+                  number: {{ .Values.service.port }}
+          - path: /hello
+            pathType: Prefix
+            backend:
+              service:
+                name: order-service
                 port:
                   number: {{ .Values.service.port }}
 
