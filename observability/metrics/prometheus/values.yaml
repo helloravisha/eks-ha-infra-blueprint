@@ -7,9 +7,7 @@ prometheus:
     serviceAccountName: prometheus
     scrapeInterval: "15s"
     retention: "2d"
-  image:
-    repository: prom/prometheus
-    tag: v2.45.0
+
 
 # Prometheus ConfigMap
 prometheusConfig:
