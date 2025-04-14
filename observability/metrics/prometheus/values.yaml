@@ -1,0 +1,20 @@
+prometheus:
+  prometheusSpec:
+    scrapeInterval: "15s"
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+    retention: 2d
+
+nodeExporter:
+  enabled: true
+  service:
+    port: 9100
+
+kube-state-metrics:
+  enabled: true
+
+grafana:
+  enabled: false  # Enable if you want Grafana too
+
+defaultRules:
+  create: true
