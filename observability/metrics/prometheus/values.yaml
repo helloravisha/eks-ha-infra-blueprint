@@ -11,6 +11,7 @@ prometheus:
     repository: prom/prometheus
     tag: v2.45.0
 
+# Prometheus ConfigMap
 prometheusConfig:
   prometheusYml: |
     global:
