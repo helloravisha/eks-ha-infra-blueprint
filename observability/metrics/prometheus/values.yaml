@@ -6,15 +6,15 @@ prometheus:
     retention: 2d
 
 nodeExporter:
-  enabled: true
+  enabled: false
   service:
     port: 9100
 
 kube-state-metrics:
-  enabled: true
+  enabled: false
 
 grafana:
-  enabled: true  # Enable if you want Grafana too
+  enabled: false  # Enable if you want Grafana too
 
 defaultRules:
   create: true
