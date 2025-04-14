@@ -8,7 +8,6 @@ prometheus:
     scrapeInterval: "15s"
     retention: "2d"
 
-# Config for the Prometheus Deployment
 prometheusConfig:
   prometheus.yml: |
     global:
@@ -23,4 +22,5 @@ prometheusConfig:
         scrape_interval: 30s
         metrics_path: /metrics
         static_configs:
-          - targets: ['node-exporter:9100']  # Example target, use Node Exporter service
+          - targets: ['node-exporter:9100']
+
