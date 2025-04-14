@@ -12,4 +12,11 @@ ingress:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
     kubernetes.io/ingress.class: nginx
+agent:
+  enabled: true
+  appName: encode-service
+  serverURL: http://pyroscope.observability.svc.cluster.local:4040  # Internal cluster service URL
+  logLevel: debug  # Optional: helps with troubleshooting
+    # scrapeInterval: 10s  # Optional: adjust how often to scrape
+    
 
