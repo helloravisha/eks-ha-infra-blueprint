@@ -18,7 +18,7 @@ affinity:
 
 ##### requiredDuringSchedulingIgnoredDuringExecution , preferredDuringSchedulingIgnoredDuringExecution 
  ✌️ Applies when pod is scheduled and not while pod is running. <br>
- ✌️ eequiredDuringScheduling - mandatroy for scheduling  , preferredDuringScheduling - not mandatroy for schduling 
+ ✌️ <b>requiredDuringScheduling</b> - mandatroy for scheduling  , <b>preferredDuringScheduling</b> - not mandatroy for schduling 
 
 
 ## Taints and Tolerations 
