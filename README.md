@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 Overview
+## Overview
 
 Naming my cluster as **Ekscape** , a blueprint for deploying a highly available Amazon EKS cluster. It my ongoig project which integrates modern DevOps tools and best practices to streamline infrastructure management and application delivery.
 
@@ -12,7 +12,7 @@ This project is perfect for engineers, teams, and platform architects looking to
 
 ---
 
-## 🧰 Features
+## Features
 
 - ⚙️ **High Availability (HA)**: Multi-AZ EKS setup with self-healing node groups
 -  **CI/CD Integration**: GitOps-driven continuous delivery using ArgoCD
