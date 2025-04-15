@@ -17,8 +17,8 @@ affinity:
 ```
 
 ##### requiredDuringSchedulingIgnoredDuringExecution , preferredDuringSchedulingIgnoredDuringExecution 
-  <b>IgnoredDuringExecution</b> Applies when pod is scheduled and not while pod is running. <br>
-  <b>requiredDuringScheduling</b> - mandatory for scheduling  , <b>preferredDuringScheduling</b> - not mandatory for scheduling 
+ <li> <b>IgnoredDuringExecution</b> Applies when pod is scheduled and not while pod is running. <br>
+ <li> <b>requiredDuringScheduling</b> - mandatory for scheduling  , <b>preferredDuringScheduling</b> - not mandatory for scheduling 
 
 ##### topologyKey - Tells which domain to consider 
  ✌️ Host, AZ, Region , Data Center etc. 
