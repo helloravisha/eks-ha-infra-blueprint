@@ -4,7 +4,7 @@
 ### ✅ Affinity: "Place the pod here, if the node matches the label."
 ### 🚫 Anti-Affinity: "Do not place the pod here, if the node has a matching label."
 
-### Note for Anti affinity - When a pod is initially scheduled on a node, anti-affinity rules do not apply to it (since it's the first pod), and it can be scheduled on any node. Only subsequent pods that are being scheduled are affected by the anti-affinity rules.
+Note for Anti affinity - When a pod is initially scheduled on a node, anti-affinity rules do not apply to it (since it's the first pod), and it can be scheduled on any node. Only subsequent pods that are being scheduled are affected by the anti-affinity rules.
 
 ```
 affinity:
