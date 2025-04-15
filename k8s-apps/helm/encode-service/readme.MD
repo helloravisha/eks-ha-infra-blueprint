@@ -1,7 +1,5 @@
 
-
-
-
+##  Affnity and AntiAffnity 
 
 
 
