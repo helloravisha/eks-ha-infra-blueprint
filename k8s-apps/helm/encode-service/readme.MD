@@ -6,7 +6,7 @@
 
 
 
-## Understanding Kubernetes Taints and Tolerations 
+## Taints and Tolerations 
 
 ```
 spec:
