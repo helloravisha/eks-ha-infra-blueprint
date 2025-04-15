@@ -30,7 +30,7 @@ spec:
                   - key: app
                     operator: In
                     values:
-                      - encode-service
+                      - llm-service
               topologyKey: kubernetes.io/hostname
 
       tolerations:
