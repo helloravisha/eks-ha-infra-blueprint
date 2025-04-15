@@ -23,7 +23,7 @@ affinity:
 ##### topologyKey - Tells which domain to consider 
  ✌️ Host, AZ, Region , Data Center etc. 
   
-## Taints and Tolerations 
+## 👉 Taints and Tolerations 
 
 ```
 spec:
@@ -50,7 +50,7 @@ The real difference between `NoSchedule`, `PreferNoSchedule`, and `NoExecute` on
 
 > 💡 You can even say: “Stay for 60 seconds and then get evicted” using `tolerationSeconds`.
 
-### topologySpreadConstraints
+### 👉  topologySpreadConstraints
 #### while Taints / Tolerations  and Affinity /Anti Affinity Talks about Node Suitability and Pod to Pod Relationship  , topologySpreadConstraints talks about distribution of pods across zones and regions 
 
 ```
