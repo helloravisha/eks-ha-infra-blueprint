@@ -14,6 +14,31 @@ spec:
       labels:
         app: encode-service
     spec:
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app: encode-service
+
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - encode-service
+              topologyKey: kubernetes.io/hostname
+
+      tolerations:
+        - key: "critical"
+          operator: "Equal"
+          value: "true"
+          effect: "NoSchedule"
+
       containers:
         - name: encode-service
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
