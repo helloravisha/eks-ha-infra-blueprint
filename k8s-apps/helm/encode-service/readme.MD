@@ -1,5 +1,5 @@
 
-##  Affnity and AntiAffnity 
+## 👉 Affnity and AntiAffnity 
 
 #### ✅ Affinity: "Place the pod here, if the node matches the label."
 #### 🚫 Anti-Affinity: "Do not place the pod here, if the node has a matching label."
