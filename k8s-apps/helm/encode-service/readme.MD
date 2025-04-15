@@ -16,6 +16,10 @@ affinity:
         topologyKey: kubernetes.io/hostname
 ```
 
+##### requiredDuringSchedulingIgnoredDuringExecution , preferredDuringSchedulingIgnoredDuringExecution 
+  ###### applies when pod is scheduled and not while pod is running.
+  ###### requiredDuringScheduling - mandatroy for scheduling  , preferredDuringScheduling - not mandatroy for schduling 
+
 
 ## Taints and Tolerations 
 
