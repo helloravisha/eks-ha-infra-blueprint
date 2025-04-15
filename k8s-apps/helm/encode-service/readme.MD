@@ -50,6 +50,20 @@ The real difference between `NoSchedule`, `PreferNoSchedule`, and `NoExecute` on
 
 > 💡 You can even say: “Stay for 60 seconds and then get evicted” using `tolerationSeconds`.
 
+### topologySpreadConstraints
+#### while Taints / Tolerations  and Affinity /Anti Affinity Talks about Node Suitability and Pod to Pod Relationship  , topologySpreadConstraints talks about distribution of pods across zones and regions 
+
+```
+topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: topology.kubernetes.io/zone
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app: encode-service
+```
+
+
 
 
 
