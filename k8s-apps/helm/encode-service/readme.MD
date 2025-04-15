@@ -1,6 +1,14 @@
 
 # Resiliency Best Practices
 
+## 👉 Readiness & Liveness Probes
+## 👉 Resource Requests & Limits
+## 👉 Pod Disruption Budgets (PDB)
+## 👉 Graceful Shutdown & PreStop Hook
+## 👉 Horizontal Pod Autoscaling (HPA)
+## 👉 Service Mesh
+## 👉 Circuit Breakers in App Code
+
 ## 👉 Affnity and AntiAffnity 
 
 #### ✅ Affinity: "Place the pod here, if the node matches the label."
