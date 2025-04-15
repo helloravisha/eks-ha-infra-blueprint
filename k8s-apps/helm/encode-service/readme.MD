@@ -1,4 +1,6 @@
 
+# Resiliency Best Practices
+
 ## 👉 Affnity and AntiAffnity 
 
 #### ✅ Affinity: "Place the pod here, if the node matches the label."
