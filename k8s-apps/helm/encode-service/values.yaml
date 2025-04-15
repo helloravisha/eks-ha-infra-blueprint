@@ -24,3 +24,11 @@ ingress:
   tls: []
 
 resources: {}
+
+podDisruptionBudget:
+  enabled: true
+  spec:
+    minAvailable: 2  # At least two pods must always be available
+    selector:
+      matchLabels:
+        app: encode-service
