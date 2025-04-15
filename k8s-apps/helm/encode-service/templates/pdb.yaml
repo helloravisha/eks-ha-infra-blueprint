@@ -4,7 +4,7 @@ metadata:
   name: encode-pdb
   namespace: {{ .Release.Namespace }}
 spec:
-  minAvailable: {{ .Values.pdb.minAvailable }}
+  minAvailable: {{ .Values.podDisruptionBudget.minAvailable }}
   selector:
     matchLabels:
       app: encode-service
