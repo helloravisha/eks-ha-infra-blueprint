@@ -22,23 +22,6 @@ spec:
             matchLabels:
               app: encode-service
 
-      affinity:
-        podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
-                  - key: app
-                    operator: In
-                    values:
-                      - llm-service
-              topologyKey: kubernetes.io/hostname
-
-      tolerations:
-        - key: "critical"
-          operator: "Equal"
-          value: "true"
-          effect: "NoSchedule"
-
       containers:
         - name: encode-service
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
