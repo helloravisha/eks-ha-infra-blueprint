@@ -34,15 +34,15 @@ spec:
 
 The real difference between `NoSchedule`, `PreferNoSchedule`, and `NoExecute` only shows up **when the pod does not have a matching toleration**.
 
-### 🟥 NoSchedule
+#### 🟥 NoSchedule
 - **No toleration?** → 🚫 Pod will **never** be scheduled on that node.
 - **With toleration?** → ✅ scheduled.
 
-### 🟧 PreferNoSchedule
+#### 🟧 PreferNoSchedule
 - **No toleration?** → 😕 Scheduler **tries to avoid** this node, but **may schedule** it anyway if no better options.
 - **With toleration?** → ✅ scheduled.
 
-### ⬛ NoExecute
+#### ⬛ NoExecute
 - **No toleration?** → 🚫 Pod will be **evicted** from the node if it's already running there and will not be scheduled there again.
 - **With toleration?** → ✅ scheduled.
 
