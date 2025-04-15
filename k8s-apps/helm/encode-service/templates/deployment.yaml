@@ -22,6 +22,12 @@ spec:
             matchLabels:
               app: encode-service
 
+      tolerations:
+        - key: "critical"
+          operator: "Equal"
+          value: "true"
+          effect: "PreferNoSchedule"  # Adding PreferNoSchedule toleration here
+
       containers:
         - name: encode-service
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
