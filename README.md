@@ -10,7 +10,7 @@ Naming my cluster as **Ekscape** , a blueprint for deploying a highly available 
 
 This project is perfect for engineers, teams, and platform architects looking to stand up a production-grade Kubernetes cluster with minimal friction on Amazon EKS.
 
-![Alt text](docs/images/arch.png)
+![Alt text](docs/images/Arch.jpeg)
 
 
 ---
