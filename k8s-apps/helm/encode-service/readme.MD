@@ -19,6 +19,10 @@ spec:
     matchLabels:
       app: encode-service
 ```
+A PDB only applies to <b>voluntary disruptions</b> such as:
+
+Node drains (e.g. during node maintenance), Evictions (like due to taints, preemption, etc.) , Rolling updates
+, Cluster autoscaler removing nodes
 
 ## 👉 Graceful Shutdown & PreStop Hook
 ## 👉 Horizontal Pod Autoscaling (HPA)
