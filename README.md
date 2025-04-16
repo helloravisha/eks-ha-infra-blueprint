@@ -32,10 +32,10 @@ This project is perfect for engineers, teams, and platform architects looking to
 
 ```bash
 .
-├── modules/                 # Terraform or Helm modules for infra components
-├── argo-cd/                 # CD configuration and example apps
-├── monitoring/              # ELK Stack setup and dashboards
-├── alerting/                # PagerDuty config and alert rules
+├── IaC/                 # Terraform  for infra components
+├── cd/                 # Argo CD configuration for deploying the apps 
+├── observability/      # Metrics, Logs, Profiling Components 
+├── k8apps/helm/        # helm charts for apps. 
 ├── scripts/                 # Utility and bootstrap scripts
 ├── README.md
 └── LICENSE
