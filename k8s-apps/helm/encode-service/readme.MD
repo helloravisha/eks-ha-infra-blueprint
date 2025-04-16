@@ -19,9 +19,9 @@ spec:
     matchLabels:
       app: encode-service
 ```
-A PDB only applies to <b>voluntary disruptions</b> such as: ( when i say this , if you you reduce replica and it violates PDB, it wont stop reducing the pods , but generates an event with PDB )
+<li>A PDB only applies to <b>voluntary disruptions</b> such as: ( when i say this , if you you reduce replica and it violates PDB, it wont stop reducing the pods , but generates an event with PDB )
 
-Node drains (e.g. during node maintenance), Evictions (like due to taints, preemption, etc.) , Rolling updates
+<li>Node drains (e.g. during node maintenance), Evictions (like due to taints, preemption, etc.) , Rolling updates
 , Cluster autoscaler removing nodes
 
 ## 👉 Graceful Shutdown & PreStop Hook
