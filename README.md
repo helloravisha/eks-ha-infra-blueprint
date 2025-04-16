@@ -13,7 +13,8 @@ This project is perfect for engineers, teams, and platform architects looking to
 ## Architecture : 
 ![Alt text](docs/images/Arch.jpeg)
 
-
+## Continuous Deployment : 
+![Alt text](docs/images/cd.jpeg)
 ---
 
 ## Features
