@@ -4,6 +4,7 @@
 ## 👉 Readiness & Liveness Probes
 ## 👉 Resource Requests & Limits
 ## 👉 Pod Disruption Budgets (PDB)
+  PDB protects the application’s availability from disruptions
 ## 👉 Graceful Shutdown & PreStop Hook
 ## 👉 Horizontal Pod Autoscaling (HPA)
 ## 👉 Service Mesh
