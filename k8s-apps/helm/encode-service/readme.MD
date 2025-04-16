@@ -7,6 +7,19 @@
 ## 👉 Pod Disruption Budgets (PDB)
   <li> PDB protects the application’s availability from disruptions <br>
 
+```
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: encode-pdb
+  namespace: encode
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: encode-service
+```
+
 ## 👉 Graceful Shutdown & PreStop Hook
 ## 👉 Horizontal Pod Autoscaling (HPA)
 ## 👉 Service Mesh
