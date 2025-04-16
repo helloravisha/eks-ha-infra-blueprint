@@ -1,1 +1,1 @@
-![Alt text](cd.jpeg)
+![Alt text](CD.jpeg)
